@@ -49,10 +49,10 @@ pipeline {
         stage('🎉 Deploy to Kubernetes') {
             steps {
                 echo 'Applying Kubernetes manifests with 3 replicas — scaling up!'
-                sh 'kubectl apply -f ./k8s/ --validate=false'
-                
+                bat 'kubectl apply -f ./k8s/ --validate=false'
             }
         }
+
 
         stage('🔍 Verify Pods') {
             steps {
