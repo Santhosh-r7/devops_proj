@@ -3,15 +3,15 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS = credentials('dockerhub-creds')
-        FRONTEND_IMAGE = 'san789/taxtrack-frontend:latest'
-        BACKEND_IMAGE  = 'san789/taxtrack-backend:latest'
+        FRONTEND_IMAGE = 'san789/dev-frontend:latest'
+        BACKEND_IMAGE  = 'san789/dev-backend:latest'
     }
 
     stages {
         stage('👋 Say Hello & Checkout') {
             steps {
                 echo 'Hey there! Let’s grab the latest code and get started!'
-                git branch: 'jenkins-setup', url: 'https://github.com/Santhosh-r7/Tax-Track-DevOps.git'
+                git branch: 'jenkins-setup', url: 'https://github.com/Santhosh-r7/devops_proj.git'
             }
         }
 

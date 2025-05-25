@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: san789/taxtrack-backend:latest
+        image: san789/dev-backend:latest
         ports:
         - containerPort: 8080
