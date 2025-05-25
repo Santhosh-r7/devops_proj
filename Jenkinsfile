@@ -9,12 +9,6 @@ pipeline {
     }
 
     stages {
-        stage('🐳 Docker Login') {
-            steps {
-                echo 'Logging into DockerHub like a pro...'
-                bat 'echo %DOCKER_CREDENTIALS_PSW% | docker login -u %DOCKER_CREDENTIALS_USR% --password-stdin'
-            }
-        }
 
         // stage('🚀 Build Frontend Image') {
         //     steps {
