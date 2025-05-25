@@ -5,11 +5,7 @@ pipeline {
         DOCKER_CREDENTIALS = credentials('dockerhub-creds')
         FRONTEND_IMAGE = 'san789/dev-frontend:latest'
         BACKEND_IMAGE  = 'san789/dev-backend:latest'
-        // Point to Minikube's Docker and kubeconfig
-        DOCKER_TLS_VERIFY = '1'
-        DOCKER_HOST = 'tcp://127.0.0.1:50523'  // use the correct port from `minikube docker-env`
-        DOCKER_CERT_PATH = 'C:\\Users\\LENOVO\\.minikube\\certs'
-        KUBECONFIG = 'C:\\Users\\LENOVO\\.kube\\config'
+        
     }
 
     stages {
