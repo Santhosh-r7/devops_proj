@@ -48,12 +48,15 @@ pipeline {
             }
         }
 
-        stage('⚙️ Start Minikube') {
-            steps {
-                echo 'Starting Minikube cluster — let’s spin up Kubernetes!'
-                bat 'minikube start --driver=docker'
-            }
-        }
+        stage('⚙ Start Minikube') {
+    steps {
+        echo 'Checking if Minikube is running...'
+        bat '''
+            IF NOT EXIST "%USERPROFILE%\\.minikube\\machines\\minikube" (
+                minikube start --driver=docker --force
+            ) ELSE (
+                echo Minikube is already running. Skipping start.
+            ) '''}}
 
         stage('🎉 Deploy to Kubernetes') {
             steps {
