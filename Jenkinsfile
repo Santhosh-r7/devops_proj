@@ -62,10 +62,11 @@ pipeline {
         stage('🎉 Deploy to Kubernetes') {
             steps {
                 echo 'Applying Kubernetes manifests with 3 replicas — scaling up!'
-                bat 'kubectl apply -f k8s/frontend-deployment.yaml'
-                bat 'kubectl apply -f k8s/backend-deployment.yaml'
-                bat 'kubectl apply -f k8s/frontend-service.yaml'
-                bat 'kubectl apply -f k8s/backend-service.yaml'
+                bat 'kubectl apply --validate=false -f k8s/frontend-deployment.yaml'
+                bat 'kubectl apply --validate=false -f k8s/backend-deployment.yaml'
+                bat 'kubectl apply --validate=false -f k8s/frontend-service.yaml'
+                bat 'kubectl apply --validate=false -f k8s/backend-service.yaml'
+
                 //bat 'kubectl scale deployment frontend --replicas=3'
                 //bat 'kubectl scale deployment backend --replicas=3'
             }
