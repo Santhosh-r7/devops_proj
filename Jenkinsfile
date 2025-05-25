@@ -11,7 +11,7 @@ pipeline {
         stage('👋 Say Hello & Checkout') {
             steps {
                 echo 'Hey there! Let’s grab the latest code and get started!'
-                git branch: 'jenkins-setup', url: 'https://github.com/Santhosh-r7/Tax-Track-DevOps.git'
+                git branch: 'jenkins-setup', url: 'https://github.com/Santhosh-r7/devops_proj.git'
             }
         }
 
