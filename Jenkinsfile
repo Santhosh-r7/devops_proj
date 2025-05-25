@@ -9,13 +9,6 @@ pipeline {
     }
 
     stages {
-        stage('👋 Say Hello & Checkout') {
-            steps {
-                echo 'Hey there! Let’s grab the latest code and get started!'
-                git branch: 'main', url: 'https://github.com/Santhosh-r7/devops_proj.git'
-            }
-        }
-
         stage('🐳 Docker Login') {
             steps {
                 echo 'Logging into DockerHub like a pro...'
