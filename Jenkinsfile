@@ -5,7 +5,7 @@ pipeline {
         DOCKER_CREDENTIALS = credentials('dockerhub-creds')
         FRONTEND_IMAGE = 'san789/dev-frontend:latest'
         BACKEND_IMAGE  = 'san789/dev-backend:latest'
-        KUBECONFIG = 'C:\\Users\\Santhosh\\.kube\\config' // <=== Make sure this path exists
+        KUBECONFIG = 'C:\\Users\\LENOVO\\.kube\\config' // <=== Make sure this path exists
     }
 
     stages {
